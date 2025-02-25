@@ -8,7 +8,7 @@ export class BrandScoreController {
 
   @Post('/analyze-social-media')
   @HttpCode(200)
-  score(@Body() body: BrandScoreRequestDto): any {
+  analyze(@Body() body: BrandScoreRequestDto) {
     return this.brandScoreService.invoke({ username: body.username });
   }
 }
