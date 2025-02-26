@@ -1,0 +1,39 @@
+{
+	"info": {
+		"_postman_id": "b1521fa6-9df8-4088-96cf-edf3b12df28e",
+		"name": "Ceartas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2478716",
+		"_collection_link": "https://crimson-capsule-89883.postman.co/workspace/Personal~61f53d95-538e-4d25-bf1f-90d0e71c6817/collection/2478716-b1521fa6-9df8-4088-96cf-edf3b12df28e?action=share&source=collection_link&creator=2478716"
+	},
+	"item": [
+		{
+			"name": "analyze-social-media",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/brand-score/analyze-social-media/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"brand-score",
+						"analyze-social-media",
+						""
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

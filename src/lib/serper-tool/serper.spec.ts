@@ -1,24 +1,24 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { BrandScoreService } from './brand-score.service';
 import { ConfigModule } from '@nestjs/config';
+import { SerperClient } from './serper';
 
 describe('BrandScoreService', () => {
-  let service: BrandScoreService;
+  let client: SerperClient;
 
   beforeEach(async () => {
     const app: TestingModule = await Test.createTestingModule({
       imports: [
         ConfigModule.forRoot(),
       ],
-      providers: [BrandScoreService],
+      providers: [SerperClient],
     }).compile();
 
-    service = app.get<BrandScoreService>(BrandScoreService);
+    client = app.get<SerperClient>(SerperClient);
   });
 
   describe('root', () => {
-    it('should return "score!"', async () => {
-      expect(await service.invoke({ username: 'Oktokuro' })).toStrictEqual({ data: 'fake-result' });
+    it('should be defined"', () => {
+      expect(client).toBeDefined();
     });
   });
 });

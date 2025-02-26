@@ -1,24 +1,24 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { BrandScoreService } from './brand-score.service';
 import { ConfigModule } from '@nestjs/config';
+import { OpenAILLM } from './openai';
 
 describe('BrandScoreService', () => {
-  let service: BrandScoreService;
+  let client: OpenAILLM;
 
   beforeEach(async () => {
     const app: TestingModule = await Test.createTestingModule({
       imports: [
         ConfigModule.forRoot(),
       ],
-      providers: [BrandScoreService],
+      providers: [OpenAILLM],
     }).compile();
 
-    service = app.get<BrandScoreService>(BrandScoreService);
+    client = app.get<OpenAILLM>(OpenAILLM);
   });
 
   describe('root', () => {
-    it('should return "score!"', async () => {
-      expect(await service.invoke({ username: 'Oktokuro' })).toStrictEqual({ data: 'fake-result' });
+    it('should be defined"', () => {
+      expect(client).toBeDefined();
     });
   });
 });

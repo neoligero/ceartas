@@ -7,4 +7,5 @@ import { BrandScoreService } from './application/brand-score.service';
   controllers: [BrandScoreController],
   providers: [BrandScoreService],
 })
+
 export class BrandScoreModule { }
