@@ -27,6 +27,6 @@ describe('BrandScoreController (e2e)', () => {
       .post('/brand-score/analyze-social-media')
       .send({ username: 'Oktokuro' })
       .expect(200)
-      .expect('score!');
+      .expect('{"data":"fake-result"}');
   });
 });
