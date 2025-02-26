@@ -37,3 +37,5 @@ $ npm run test:e2e
 1. If the process need to be done on the fly we would need to have a load balancer in the middle and several instances of the application orchestrated with kubernetes, AWS or whatever.
 
 2. If the answer is not mandatory, I would send the message into a queue and to have a second process in the background processing all this in background.
+
+- There is a Postman collection in the contrib folder, but the endpoint is mocked.
